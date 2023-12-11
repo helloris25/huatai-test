@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="905bd21f-cf3e-4f14-81fd-5e8d4cb14946" name="Changes" comment="Made BrightnessMeter lib component">
+      <change afterPath="$PROJECT_DIR$/ui-lib/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/.eslintrc.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/.npmrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/.prettierignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/histoire.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/playwright.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/app.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/app.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/BrightnessMeter.story.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/BrightnessMeter.story.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/BrightnessMeter.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/BrightnessMeter.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/MeterCalculator.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/MeterCalculator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/icons/Moon.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/icons/Sun.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/common/vars.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/lib/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/src/routes/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/static/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/svelte.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/tests/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui-lib/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="brightnes-meter.svelte" />
+        <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="Control" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ZJ2Lpb3UKKcp6qMaLiO3awLNCj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Playwright.BrightnessMeter component.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Vitest.MeterCalculator - calcLevelFromMinMax.executor": "Run",
+    "Vitest.MeterCalculator - reverseCalcLevel.executor": "Run",
+    "Vitest.MyComponent changes level on button click.executor": "Run",
+    "Vitest.sum test.executor": "Run",
+    "last_opened_file_path": "E:/projects/test-huatai/ui-lib/src/lib/BrightnessMeter",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.check:watch.executor": "Run",
+    "npm.dev (1).executor": "Run",
+    "npm.dev (2).executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.story:dev.executor": "Run",
+    "npm.test.executor": "Run",
+    "npm.test:unit.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "E:\\programs\\WebStorm 2020.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projects\test-huatai\ui-lib\src\lib\BrightnessMeter" />
+      <recent name="E:\projects\test-huatai\ui-lib\src\lib" />
+      <recent name="E:\projects\test-huatai\ui-lib\static" />
+      <recent name="E:\projects\test-huatai\brightness-meter\src\lib\brightness-meter" />
+      <recent name="E:\projects\test-huatai\brightness-meter\src\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projects\test-huatai\ui-lib\src\lib\BrightnessMeter" />
+      <recent name="E:\projects\test-huatai\ui-lib\src\lib\BrightnessMeter\icons" />
+      <recent name="E:\projects\test-huatai\ui-lib\src\lib\Icon\icons-components" />
+      <recent name="E:\projects\test-huatai\custom-metter\src\routes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.story:dev">
+    <configuration name="MyComponent changes level on button click" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/ui-lib/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$/ui-lib" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/ui-lib/src/lib/BrightnessMeter/BrightnessMeter.test.ts" />
+      <test-names>
+        <test-name value="MyComponent changes level on button click" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/ui-lib/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="story:dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/ui-lib/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="story:dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/ui-lib/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:unit" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/ui-lib/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:unit" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.story:dev" />
+        <item itemvalue="npm.test:unit" />
+        <item itemvalue="npm.test" />
+        <item itemvalue="Vitest.MyComponent changes level on button click" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="905bd21f-cf3e-4f14-81fd-5e8d4cb14946" name="Changes" comment="" />
+      <created>1702125808071</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702125808071</updated>
+      <workItem from="1702125809211" duration="51327000" />
+      <workItem from="1702257165553" duration="15521000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
