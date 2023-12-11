@@ -15,7 +15,7 @@
     "test:integration": "playwright test",
     "test:unit": "vitest",
     "story:dev": "histoire dev",
-    "story:build": "histoire build",
+    "story:build": "histoire build --base=/huatai-test/",
     "story:preview": "histoire preview"
   },
   "exports": {
