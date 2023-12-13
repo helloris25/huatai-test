@@ -12,6 +12,7 @@ const __resolved__virtual_storySource_srcLibBrightnessmeterBrightnessmeterStoryS
 \r
 <Hst.Story title="BrightnessMeter" responsiveDisabled>\r
 \r
+    <div style="background: #333; padding: 25px">\r
     <BrightnessMeter\r
             {min}\r
             {max}\r
@@ -56,7 +57,7 @@ const __resolved__virtual_storySource_srcLibBrightnessmeterBrightnessmeterStoryS
             </li>\r
         </ul>\r
     </div>\r
-\r
+    </div>\r
 \r
     <svelte:fragment slot="controls">\r
         <Hst.Number\r

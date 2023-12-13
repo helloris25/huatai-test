@@ -1,4 +1,4 @@
-import { Y as SvelteComponentDev, Z as init, $ as safe_not_equal, a0 as dispatch_dev, a1 as assign, a2 as compute_rest_props, a3 as validate_slots, a4 as exclude_internal_props, a5 as svg_element, a6 as claim_svg_element, a7 as children, a8 as detach_dev, a9 as set_svg_attributes, aa as toggle_class, ab as add_location, ac as attr_dev, ad as insert_hydration_dev, ae as append_hydration_dev, af as get_spread_update, ag as noop, ah as construct_svelte_component_dev, ai as get_spread_object, aj as create_component, ak as empty, al as claim_component, am as mount_component, an as group_outros, ao as transition_out, ap as destroy_component, aq as check_outros, ar as transition_in, as as ensure_array_like_dev, at as validate_each_keys, au as createEventDispatcher, av as element, aw as claim_element, ax as listen_dev, ay as update_keyed_each, az as run_all, aA as destroy_block, aB as space, aC as claim_space, aD as logEvent, aE as binding_callbacks, aF as bind, aG as text, aH as get_svelte_dataset, aI as claim_text, aJ as set_style, aK as add_flush_callback, _ as __vitePreload, aL as createRouter, v as histoireConfig, aM as createWebHistory, aN as createWebHashHistory, aO as markRaw, K as reactive, d as defineComponent, r as ref, aP as watchEffect, o as openBlock, q as createBlock, aQ as mergeProps, aR as resolveDynamicComponent, h as createCommentVNode } from "./vendor-d0ae1662.js";
+import { Y as SvelteComponentDev, Z as init, $ as safe_not_equal, a0 as dispatch_dev, a1 as assign, a2 as compute_rest_props, a3 as validate_slots, a4 as exclude_internal_props, a5 as svg_element, a6 as claim_svg_element, a7 as children, a8 as detach_dev, a9 as set_svg_attributes, aa as toggle_class, ab as add_location, ac as attr_dev, ad as insert_hydration_dev, ae as append_hydration_dev, af as get_spread_update, ag as noop, ah as construct_svelte_component_dev, ai as get_spread_object, aj as create_component, ak as empty, al as claim_component, am as mount_component, an as group_outros, ao as transition_out, ap as destroy_component, aq as check_outros, ar as transition_in, as as ensure_array_like_dev, at as validate_each_keys, au as createEventDispatcher, av as element, aw as claim_element, ax as listen_dev, ay as update_keyed_each, az as run_all, aA as destroy_block, aB as space, aC as claim_space, aD as logEvent, aE as binding_callbacks, aF as bind, aG as text, aH as get_svelte_dataset, aI as claim_text, aJ as set_style, aK as add_flush_callback, _ as __vitePreload, aL as createRouter, v as histoireConfig, aM as createWebHistory, aN as createWebHashHistory, aO as markRaw, K as reactive, d as defineComponent, r as ref, aP as watchEffect, o as openBlock, q as createBlock, aQ as mergeProps, aR as resolveDynamicComponent, h as createCommentVNode } from "./vendor-95ffaa79.js";
 class MeterCalculator {
   constructor(min, max, maxLevel) {
     this.min = min;
@@ -1283,9 +1283,10 @@ class BrightnessMeter extends SvelteComponentDev {
 }
 const file$2 = "E:/projects/test-huatai/src/lib/BrightnessMeter/BrightnessMeter.story.svelte";
 function create_default_slot$2(ctx) {
+  let div1;
   let brightnessmeter;
   let t0;
-  let div;
+  let div0;
   let br0;
   let t1;
   let strong0;
@@ -1380,9 +1381,10 @@ function create_default_slot$2(ctx) {
   );
   const block = {
     c: function create() {
+      div1 = element("div");
       create_component(brightnessmeter.$$.fragment);
       t0 = space();
-      div = element("div");
+      div0 = element("div");
       br0 = element("br");
       t1 = space();
       strong0 = element("strong");
@@ -1451,24 +1453,26 @@ function create_default_slot$2(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      claim_component(brightnessmeter.$$.fragment, nodes);
-      t0 = claim_space(nodes);
-      div = claim_element(nodes, "DIV", { style: true });
-      var div_nodes = children(div);
-      br0 = claim_element(div_nodes, "BR", {});
-      t1 = claim_space(div_nodes);
-      strong0 = claim_element(div_nodes, "STRONG", { ["data-svelte-h"]: true });
+      div1 = claim_element(nodes, "DIV", { style: true });
+      var div1_nodes = children(div1);
+      claim_component(brightnessmeter.$$.fragment, div1_nodes);
+      t0 = claim_space(div1_nodes);
+      div0 = claim_element(div1_nodes, "DIV", { style: true });
+      var div0_nodes = children(div0);
+      br0 = claim_element(div0_nodes, "BR", {});
+      t1 = claim_space(div0_nodes);
+      strong0 = claim_element(div0_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong0) !== "svelte-9irroi")
         strong0.textContent = textContent;
-      t3 = claim_text(div_nodes, " - компонент для изменения яркости.\r\n\r\n        ");
-      p0 = claim_element(div_nodes, "P", {});
+      t3 = claim_text(div0_nodes, " - компонент для изменения яркости.\r\n\r\n        ");
+      p0 = claim_element(div0_nodes, "P", {});
       var p0_nodes = children(p0);
       strong1 = claim_element(p0_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong1) !== "svelte-jb0iik")
         strong1.textContent = textContent_1;
       p0_nodes.forEach(detach_dev);
-      t5 = claim_space(div_nodes);
-      ul0 = claim_element(div_nodes, "UL", {});
+      t5 = claim_space(div0_nodes);
+      ul0 = claim_element(div0_nodes, "UL", {});
       var ul0_nodes = children(ul0);
       li0 = claim_element(ul0_nodes, "LI", {});
       var li0_nodes = children(li0);
@@ -1502,17 +1506,17 @@ function create_default_slot$2(ctx) {
       t16 = claim_text(li3_nodes, " - значение при котором будет изменяться цвет кнопок");
       li3_nodes.forEach(detach_dev);
       ul0_nodes.forEach(detach_dev);
-      t17 = claim_space(div_nodes);
-      br1 = claim_element(div_nodes, "BR", {});
-      t18 = claim_space(div_nodes);
-      p1 = claim_element(div_nodes, "P", {});
+      t17 = claim_space(div0_nodes);
+      br1 = claim_element(div0_nodes, "BR", {});
+      t18 = claim_space(div0_nodes);
+      p1 = claim_element(div0_nodes, "P", {});
       var p1_nodes = children(p1);
       strong6 = claim_element(p1_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong6) !== "svelte-1p55449")
         strong6.textContent = textContent_6;
       p1_nodes.forEach(detach_dev);
-      t20 = claim_space(div_nodes);
-      ul1 = claim_element(div_nodes, "UL", {});
+      t20 = claim_space(div0_nodes);
+      ul1 = claim_element(div0_nodes, "UL", {});
       var ul1_nodes = children(ul1);
       li4 = claim_element(ul1_nodes, "LI", {});
       var li4_nodes = children(li4);
@@ -1522,17 +1526,17 @@ function create_default_slot$2(ctx) {
       t22 = claim_text(li4_nodes, " - происходит когда изменяется значение. В него передаётся\r\n        новое значение в рамках min и max");
       li4_nodes.forEach(detach_dev);
       ul1_nodes.forEach(detach_dev);
-      t23 = claim_space(div_nodes);
-      br2 = claim_element(div_nodes, "BR", {});
-      t24 = claim_space(div_nodes);
-      p2 = claim_element(div_nodes, "P", {});
+      t23 = claim_space(div0_nodes);
+      br2 = claim_element(div0_nodes, "BR", {});
+      t24 = claim_space(div0_nodes);
+      p2 = claim_element(div0_nodes, "P", {});
       var p2_nodes = children(p2);
       strong8 = claim_element(p2_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong8) !== "svelte-1txzquh")
         strong8.textContent = textContent_8;
       p2_nodes.forEach(detach_dev);
-      t26 = claim_space(div_nodes);
-      ul2 = claim_element(div_nodes, "UL", {});
+      t26 = claim_space(div0_nodes);
+      ul2 = claim_element(div0_nodes, "UL", {});
       var ul2_nodes = children(ul2);
       li5 = claim_element(ul2_nodes, "LI", {});
       var li5_nodes = children(li5);
@@ -1561,55 +1565,60 @@ function create_default_slot$2(ctx) {
         i.textContent = textContent_12;
       li7_nodes.forEach(detach_dev);
       ul2_nodes.forEach(detach_dev);
-      div_nodes.forEach(detach_dev);
+      div0_nodes.forEach(detach_dev);
+      div1_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
-      add_location(br0, file$2, 25, 8, 610);
-      add_location(strong0, file$2, 26, 8, 624);
-      add_location(strong1, file$2, 28, 11, 706);
-      add_location(p0, file$2, 28, 8, 703);
-      add_location(strong2, file$2, 30, 12, 761);
-      add_location(li0, file$2, 30, 8, 757);
-      add_location(strong3, file$2, 31, 12, 841);
-      add_location(li1, file$2, 31, 8, 837);
-      add_location(strong4, file$2, 32, 12, 922);
-      add_location(li2, file$2, 32, 8, 918);
-      add_location(strong5, file$2, 33, 12, 994);
-      add_location(li3, file$2, 33, 8, 990);
-      add_location(ul0, file$2, 29, 8, 743);
-      add_location(br1, file$2, 35, 8, 1115);
-      add_location(strong6, file$2, 36, 11, 1132);
-      add_location(p1, file$2, 36, 8, 1129);
-      add_location(strong7, file$2, 37, 16, 1178);
-      add_location(li4, file$2, 37, 12, 1174);
-      add_location(ul1, file$2, 37, 8, 1170);
-      add_location(br2, file$2, 41, 8, 1360);
-      add_location(strong8, file$2, 42, 11, 1377);
-      add_location(p2, file$2, 42, 8, 1374);
-      add_location(strong9, file$2, 45, 16, 1458);
-      add_location(li5, file$2, 44, 12, 1436);
-      add_location(strong10, file$2, 48, 16, 1566);
-      add_location(li6, file$2, 47, 12, 1544);
-      add_location(strong11, file$2, 51, 16, 1720);
-      add_location(i, file$2, 53, 16, 1871);
-      add_location(li7, file$2, 50, 12, 1698);
-      add_location(ul2, file$2, 43, 8, 1418);
-      set_style(div, "color", "rgb(244, 244, 244)");
-      add_location(div, file$2, 24, 4, 561);
+      add_location(br0, file$2, 26, 8, 661);
+      add_location(strong0, file$2, 27, 8, 675);
+      add_location(strong1, file$2, 29, 11, 757);
+      add_location(p0, file$2, 29, 8, 754);
+      add_location(strong2, file$2, 31, 12, 812);
+      add_location(li0, file$2, 31, 8, 808);
+      add_location(strong3, file$2, 32, 12, 892);
+      add_location(li1, file$2, 32, 8, 888);
+      add_location(strong4, file$2, 33, 12, 973);
+      add_location(li2, file$2, 33, 8, 969);
+      add_location(strong5, file$2, 34, 12, 1045);
+      add_location(li3, file$2, 34, 8, 1041);
+      add_location(ul0, file$2, 30, 8, 794);
+      add_location(br1, file$2, 36, 8, 1166);
+      add_location(strong6, file$2, 37, 11, 1183);
+      add_location(p1, file$2, 37, 8, 1180);
+      add_location(strong7, file$2, 38, 16, 1229);
+      add_location(li4, file$2, 38, 12, 1225);
+      add_location(ul1, file$2, 38, 8, 1221);
+      add_location(br2, file$2, 42, 8, 1411);
+      add_location(strong8, file$2, 43, 11, 1428);
+      add_location(p2, file$2, 43, 8, 1425);
+      add_location(strong9, file$2, 46, 16, 1509);
+      add_location(li5, file$2, 45, 12, 1487);
+      add_location(strong10, file$2, 49, 16, 1617);
+      add_location(li6, file$2, 48, 12, 1595);
+      add_location(strong11, file$2, 52, 16, 1771);
+      add_location(i, file$2, 54, 16, 1922);
+      add_location(li7, file$2, 51, 12, 1749);
+      add_location(ul2, file$2, 44, 8, 1469);
+      set_style(div0, "color", "rgb(244, 244, 244)");
+      add_location(div0, file$2, 25, 4, 612);
+      set_style(div1, "background", "#333");
+      set_style(div1, "padding", "25px");
+      add_location(div1, file$2, 14, 4, 297);
     },
     m: function mount(target, anchor) {
-      mount_component(brightnessmeter, target, anchor);
-      insert_hydration_dev(target, t0, anchor);
-      insert_hydration_dev(target, div, anchor);
-      append_hydration_dev(div, br0);
-      append_hydration_dev(div, t1);
-      append_hydration_dev(div, strong0);
-      append_hydration_dev(div, t3);
-      append_hydration_dev(div, p0);
+      insert_hydration_dev(target, div1, anchor);
+      mount_component(brightnessmeter, div1, null);
+      append_hydration_dev(div1, t0);
+      append_hydration_dev(div1, div0);
+      append_hydration_dev(div0, br0);
+      append_hydration_dev(div0, t1);
+      append_hydration_dev(div0, strong0);
+      append_hydration_dev(div0, t3);
+      append_hydration_dev(div0, p0);
       append_hydration_dev(p0, strong1);
-      append_hydration_dev(div, t5);
-      append_hydration_dev(div, ul0);
+      append_hydration_dev(div0, t5);
+      append_hydration_dev(div0, ul0);
       append_hydration_dev(ul0, li0);
       append_hydration_dev(li0, strong2);
       append_hydration_dev(li0, t7);
@@ -1625,23 +1634,23 @@ function create_default_slot$2(ctx) {
       append_hydration_dev(ul0, li3);
       append_hydration_dev(li3, strong5);
       append_hydration_dev(li3, t16);
-      append_hydration_dev(div, t17);
-      append_hydration_dev(div, br1);
-      append_hydration_dev(div, t18);
-      append_hydration_dev(div, p1);
+      append_hydration_dev(div0, t17);
+      append_hydration_dev(div0, br1);
+      append_hydration_dev(div0, t18);
+      append_hydration_dev(div0, p1);
       append_hydration_dev(p1, strong6);
-      append_hydration_dev(div, t20);
-      append_hydration_dev(div, ul1);
+      append_hydration_dev(div0, t20);
+      append_hydration_dev(div0, ul1);
       append_hydration_dev(ul1, li4);
       append_hydration_dev(li4, strong7);
       append_hydration_dev(li4, t22);
-      append_hydration_dev(div, t23);
-      append_hydration_dev(div, br2);
-      append_hydration_dev(div, t24);
-      append_hydration_dev(div, p2);
+      append_hydration_dev(div0, t23);
+      append_hydration_dev(div0, br2);
+      append_hydration_dev(div0, t24);
+      append_hydration_dev(div0, p2);
       append_hydration_dev(p2, strong8);
-      append_hydration_dev(div, t26);
-      append_hydration_dev(div, ul2);
+      append_hydration_dev(div0, t26);
+      append_hydration_dev(div0, ul2);
       append_hydration_dev(ul2, li5);
       append_hydration_dev(li5, strong9);
       append_hydration_dev(li5, t28);
@@ -1688,10 +1697,9 @@ function create_default_slot$2(ctx) {
     },
     d: function destroy(detaching) {
       if (detaching) {
-        detach_dev(t0);
-        detach_dev(div);
+        detach_dev(div1);
       }
-      destroy_component(brightnessmeter, detaching);
+      destroy_component(brightnessmeter);
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
@@ -1871,7 +1879,7 @@ function create_controls_slot$2(ctx) {
     block,
     id: create_controls_slot$2.name,
     type: "slot",
-    source: '(61:4) <svelte:fragment slot=\\"controls\\">',
+    source: '(62:4) <svelte:fragment slot=\\"controls\\">',
     ctx
   });
   return block;
@@ -2033,9 +2041,10 @@ class BrightnessMeter_story extends SvelteComponentDev {
 }
 const file$1 = "E:/projects/test-huatai/src/lib/Icon/Icon.story.svelte";
 function create_default_slot$1(ctx) {
+  let div1;
   let icon_1;
   let t0;
-  let div;
+  let div0;
   let br;
   let t1;
   let strong0;
@@ -2060,14 +2069,15 @@ function create_default_slot$1(ctx) {
   });
   const block = {
     c: function create() {
+      div1 = element("div");
       create_component(icon_1.$$.fragment);
       t0 = space();
-      div = element("div");
+      div0 = element("div");
       br = element("br");
       t1 = space();
       strong0 = element("strong");
       strong0.textContent = textContent;
-      t3 = text(" - компонент для отображения доступных иконок.\r\n\r\n    ");
+      t3 = text(" - компонент для отображения доступных иконок.\r\n\r\n            ");
       p = element("p");
       strong1 = element("strong");
       strong1.textContent = textContent_1;
@@ -2080,24 +2090,26 @@ function create_default_slot$1(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      claim_component(icon_1.$$.fragment, nodes);
-      t0 = claim_space(nodes);
-      div = claim_element(nodes, "DIV", { style: true });
-      var div_nodes = children(div);
-      br = claim_element(div_nodes, "BR", {});
-      t1 = claim_space(div_nodes);
-      strong0 = claim_element(div_nodes, "STRONG", { ["data-svelte-h"]: true });
+      div1 = claim_element(nodes, "DIV", { style: true });
+      var div1_nodes = children(div1);
+      claim_component(icon_1.$$.fragment, div1_nodes);
+      t0 = claim_space(div1_nodes);
+      div0 = claim_element(div1_nodes, "DIV", { style: true });
+      var div0_nodes = children(div0);
+      br = claim_element(div0_nodes, "BR", {});
+      t1 = claim_space(div0_nodes);
+      strong0 = claim_element(div0_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong0) !== "svelte-timuel")
         strong0.textContent = textContent;
-      t3 = claim_text(div_nodes, " - компонент для отображения доступных иконок.\r\n\r\n    ");
-      p = claim_element(div_nodes, "P", {});
+      t3 = claim_text(div0_nodes, " - компонент для отображения доступных иконок.\r\n\r\n            ");
+      p = claim_element(div0_nodes, "P", {});
       var p_nodes = children(p);
       strong1 = claim_element(p_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong1) !== "svelte-jb0iik")
         strong1.textContent = textContent_1;
       p_nodes.forEach(detach_dev);
-      t5 = claim_space(div_nodes);
-      ul = claim_element(div_nodes, "UL", {});
+      t5 = claim_space(div0_nodes);
+      ul = claim_element(div0_nodes, "UL", {});
       var ul_nodes = children(ul);
       li = claim_element(ul_nodes, "LI", {});
       var li_nodes = children(li);
@@ -2107,32 +2119,37 @@ function create_default_slot$1(ctx) {
       t7 = claim_text(li_nodes, " - Имя иконки из списка доступных иконок IconType");
       li_nodes.forEach(detach_dev);
       ul_nodes.forEach(detach_dev);
-      div_nodes.forEach(detach_dev);
+      div0_nodes.forEach(detach_dev);
+      div1_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
-      add_location(br, file$1, 17, 4, 273);
-      add_location(strong0, file$1, 18, 4, 283);
-      add_location(strong1, file$1, 20, 7, 361);
-      add_location(p, file$1, 20, 4, 358);
-      add_location(strong2, file$1, 22, 16, 420);
-      add_location(li, file$1, 22, 12, 416);
-      add_location(ul, file$1, 21, 8, 398);
-      set_style(div, "color", "rgb(244, 244, 244)");
-      add_location(div, file$1, 16, 4, 228);
+      add_location(br, file$1, 17, 12, 334);
+      add_location(strong0, file$1, 18, 12, 352);
+      add_location(strong1, file$1, 20, 15, 438);
+      add_location(p, file$1, 20, 12, 435);
+      add_location(strong2, file$1, 22, 20, 505);
+      add_location(li, file$1, 22, 16, 501);
+      add_location(ul, file$1, 21, 12, 479);
+      set_style(div0, "color", "rgb(244, 244, 244)");
+      add_location(div0, file$1, 16, 8, 281);
+      set_style(div1, "background", "#333");
+      set_style(div1, "padding", "25px");
+      add_location(div1, file$1, 14, 4, 202);
     },
     m: function mount(target, anchor) {
-      mount_component(icon_1, target, anchor);
-      insert_hydration_dev(target, t0, anchor);
-      insert_hydration_dev(target, div, anchor);
-      append_hydration_dev(div, br);
-      append_hydration_dev(div, t1);
-      append_hydration_dev(div, strong0);
-      append_hydration_dev(div, t3);
-      append_hydration_dev(div, p);
+      insert_hydration_dev(target, div1, anchor);
+      mount_component(icon_1, div1, null);
+      append_hydration_dev(div1, t0);
+      append_hydration_dev(div1, div0);
+      append_hydration_dev(div0, br);
+      append_hydration_dev(div0, t1);
+      append_hydration_dev(div0, strong0);
+      append_hydration_dev(div0, t3);
+      append_hydration_dev(div0, p);
       append_hydration_dev(p, strong1);
-      append_hydration_dev(div, t5);
-      append_hydration_dev(div, ul);
+      append_hydration_dev(div0, t5);
+      append_hydration_dev(div0, ul);
       append_hydration_dev(ul, li);
       append_hydration_dev(li, strong2);
       append_hydration_dev(li, t7);
@@ -2158,10 +2175,9 @@ function create_default_slot$1(ctx) {
     },
     d: function destroy(detaching) {
       if (detaching) {
-        detach_dev(t0);
-        detach_dev(div);
+        detach_dev(div1);
       }
-      destroy_component(icon_1, detaching);
+      destroy_component(icon_1);
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
@@ -2234,7 +2250,7 @@ function create_controls_slot$1(ctx) {
     block,
     id: create_controls_slot$1.name,
     type: "slot",
-    source: '(23:4) <svelte:fragment slot=\\"controls\\">',
+    source: '(24:4) <svelte:fragment slot=\\"controls\\">',
     ctx
   });
   return block;
@@ -2353,9 +2369,10 @@ class Icon_story extends SvelteComponentDev {
 }
 const file = "E:/projects/test-huatai/src/lib/ScaleBar/ScaleBar.story.svelte";
 function create_default_slot(ctx) {
+  let div1;
   let scalebar;
   let t0;
-  let div;
+  let div0;
   let br0;
   let t1;
   let strong0;
@@ -2412,7 +2429,7 @@ function create_default_slot(ctx) {
   let textContent_9 = "Accessibility";
   let t29;
   let i;
-  let textContent_10 = 'Теги Button используются с целью повышения доступности, т.к. они нативно фокусируются при нажатии на\r\n                    клавишу Tab и "кликаются" при нажатии на пробел';
+  let textContent_10 = 'Теги Button используются с целью повышения доступности, т.к. они нативно фокусируются при нажатии\r\n                        на\r\n                        клавишу Tab и "кликаются" при нажатии на пробел';
   let current;
   scalebar = new ScaleBar({
     props: {
@@ -2434,14 +2451,15 @@ function create_default_slot(ctx) {
   );
   const block = {
     c: function create() {
+      div1 = element("div");
       create_component(scalebar.$$.fragment);
       t0 = space();
-      div = element("div");
+      div0 = element("div");
       br0 = element("br");
       t1 = space();
       strong0 = element("strong");
       strong0.textContent = textContent;
-      t3 = text(" - интерактивная шкала\r\n        ");
+      t3 = text(" - интерактивная шкала\r\n            ");
       br1 = element("br");
       t4 = space();
       p0 = element("p");
@@ -2469,7 +2487,7 @@ function create_default_slot(ctx) {
       li2 = element("li");
       strong5 = element("strong");
       strong5.textContent = textContent_5;
-      t17 = text(" - происходит когда изменяется значение. В него передаётся\r\n                новое количество выбранных делений");
+      t17 = text(" - происходит когда изменяется значение. В него\r\n                    передаётся\r\n                    новое количество выбранных делений");
       t18 = space();
       br3 = element("br");
       t19 = space();
@@ -2491,32 +2509,34 @@ function create_default_slot(ctx) {
       li5 = element("li");
       strong9 = element("strong");
       strong9.textContent = textContent_9;
-      t29 = text(" - доступен для людей с ограниченными возможностями, проставлены все\r\n                необхадимые теги.\r\n                ");
+      t29 = text(" - доступен для людей с ограниченными возможностями, проставлены все\r\n                    необхадимые теги.\r\n                    ");
       i = element("i");
       i.textContent = textContent_10;
       this.h();
     },
     l: function claim(nodes) {
-      claim_component(scalebar.$$.fragment, nodes);
-      t0 = claim_space(nodes);
-      div = claim_element(nodes, "DIV", { style: true });
-      var div_nodes = children(div);
-      br0 = claim_element(div_nodes, "BR", {});
-      t1 = claim_space(div_nodes);
-      strong0 = claim_element(div_nodes, "STRONG", { ["data-svelte-h"]: true });
+      div1 = claim_element(nodes, "DIV", { style: true });
+      var div1_nodes = children(div1);
+      claim_component(scalebar.$$.fragment, div1_nodes);
+      t0 = claim_space(div1_nodes);
+      div0 = claim_element(div1_nodes, "DIV", { style: true });
+      var div0_nodes = children(div0);
+      br0 = claim_element(div0_nodes, "BR", {});
+      t1 = claim_space(div0_nodes);
+      strong0 = claim_element(div0_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong0) !== "svelte-1531uof")
         strong0.textContent = textContent;
-      t3 = claim_text(div_nodes, " - интерактивная шкала\r\n        ");
-      br1 = claim_element(div_nodes, "BR", {});
-      t4 = claim_space(div_nodes);
-      p0 = claim_element(div_nodes, "P", {});
+      t3 = claim_text(div0_nodes, " - интерактивная шкала\r\n            ");
+      br1 = claim_element(div0_nodes, "BR", {});
+      t4 = claim_space(div0_nodes);
+      p0 = claim_element(div0_nodes, "P", {});
       var p0_nodes = children(p0);
       strong1 = claim_element(p0_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong1) !== "svelte-jb0iik")
         strong1.textContent = textContent_1;
       p0_nodes.forEach(detach_dev);
-      t6 = claim_space(div_nodes);
-      ul0 = claim_element(div_nodes, "UL", {});
+      t6 = claim_space(div0_nodes);
+      ul0 = claim_element(div0_nodes, "UL", {});
       var ul0_nodes = children(ul0);
       li0 = claim_element(ul0_nodes, "LI", {});
       var li0_nodes = children(li0);
@@ -2534,37 +2554,37 @@ function create_default_slot(ctx) {
       t11 = claim_text(li1_nodes, " - выбранные деления");
       li1_nodes.forEach(detach_dev);
       ul0_nodes.forEach(detach_dev);
-      t12 = claim_space(div_nodes);
-      br2 = claim_element(div_nodes, "BR", {});
-      t13 = claim_space(div_nodes);
-      p1 = claim_element(div_nodes, "P", {});
+      t12 = claim_space(div0_nodes);
+      br2 = claim_element(div0_nodes, "BR", {});
+      t13 = claim_space(div0_nodes);
+      p1 = claim_element(div0_nodes, "P", {});
       var p1_nodes = children(p1);
       strong4 = claim_element(p1_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong4) !== "svelte-1p55449")
         strong4.textContent = textContent_4;
       p1_nodes.forEach(detach_dev);
-      t15 = claim_space(div_nodes);
-      ul1 = claim_element(div_nodes, "UL", {});
+      t15 = claim_space(div0_nodes);
+      ul1 = claim_element(div0_nodes, "UL", {});
       var ul1_nodes = children(ul1);
       li2 = claim_element(ul1_nodes, "LI", {});
       var li2_nodes = children(li2);
       strong5 = claim_element(li2_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong5) !== "svelte-1mb76wu")
         strong5.textContent = textContent_5;
-      t17 = claim_text(li2_nodes, " - происходит когда изменяется значение. В него передаётся\r\n                новое количество выбранных делений");
+      t17 = claim_text(li2_nodes, " - происходит когда изменяется значение. В него\r\n                    передаётся\r\n                    новое количество выбранных делений");
       li2_nodes.forEach(detach_dev);
       ul1_nodes.forEach(detach_dev);
-      t18 = claim_space(div_nodes);
-      br3 = claim_element(div_nodes, "BR", {});
-      t19 = claim_space(div_nodes);
-      p2 = claim_element(div_nodes, "P", {});
+      t18 = claim_space(div0_nodes);
+      br3 = claim_element(div0_nodes, "BR", {});
+      t19 = claim_space(div0_nodes);
+      p2 = claim_element(div0_nodes, "P", {});
       var p2_nodes = children(p2);
       strong6 = claim_element(p2_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong6) !== "svelte-1txzquh")
         strong6.textContent = textContent_6;
       p2_nodes.forEach(detach_dev);
-      t21 = claim_space(div_nodes);
-      ul2 = claim_element(div_nodes, "UL", {});
+      t21 = claim_space(div0_nodes);
+      ul2 = claim_element(div0_nodes, "UL", {});
       var ul2_nodes = children(ul2);
       li3 = claim_element(ul2_nodes, "LI", {});
       var li3_nodes = children(li3);
@@ -2587,60 +2607,65 @@ function create_default_slot(ctx) {
       strong9 = claim_element(li5_nodes, "STRONG", { ["data-svelte-h"]: true });
       if (get_svelte_dataset(strong9) !== "svelte-1avoc5a")
         strong9.textContent = textContent_9;
-      t29 = claim_text(li5_nodes, " - доступен для людей с ограниченными возможностями, проставлены все\r\n                необхадимые теги.\r\n                ");
+      t29 = claim_text(li5_nodes, " - доступен для людей с ограниченными возможностями, проставлены все\r\n                    необхадимые теги.\r\n                    ");
       i = claim_element(li5_nodes, "I", { ["data-svelte-h"]: true });
-      if (get_svelte_dataset(i) !== "svelte-1anb3k")
+      if (get_svelte_dataset(i) !== "svelte-1ed25gi")
         i.textContent = textContent_10;
       li5_nodes.forEach(detach_dev);
       ul2_nodes.forEach(detach_dev);
-      div_nodes.forEach(detach_dev);
+      div0_nodes.forEach(detach_dev);
+      div1_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
-      add_location(br0, file, 21, 8, 531);
-      add_location(strong0, file, 22, 8, 545);
-      add_location(br1, file, 23, 8, 602);
-      add_location(strong1, file, 24, 11, 619);
-      add_location(p0, file, 24, 8, 616);
-      add_location(strong2, file, 26, 16, 678);
-      add_location(li0, file, 26, 12, 674);
-      add_location(strong3, file, 27, 16, 756);
-      add_location(li1, file, 27, 12, 752);
-      add_location(ul0, file, 25, 8, 656);
-      add_location(br2, file, 29, 8, 844);
-      add_location(strong4, file, 30, 11, 861);
-      add_location(p1, file, 30, 8, 858);
-      add_location(strong5, file, 32, 16, 921);
-      add_location(li2, file, 32, 12, 917);
-      add_location(ul1, file, 31, 8, 899);
-      add_location(br3, file, 36, 8, 1112);
-      add_location(strong6, file, 37, 11, 1129);
-      add_location(p2, file, 37, 8, 1126);
-      add_location(strong7, file, 40, 16, 1210);
-      add_location(li3, file, 39, 12, 1188);
-      add_location(strong8, file, 43, 16, 1318);
-      add_location(li4, file, 42, 12, 1296);
-      add_location(strong9, file, 46, 16, 1472);
-      add_location(i, file, 48, 16, 1623);
-      add_location(li5, file, 45, 12, 1450);
-      add_location(ul2, file, 38, 8, 1170);
-      set_style(div, "color", "rgb(244, 244, 244)");
-      add_location(div, file, 20, 4, 482);
+      add_location(br0, file, 22, 12, 606);
+      add_location(strong0, file, 23, 12, 624);
+      add_location(br1, file, 24, 12, 685);
+      add_location(strong1, file, 25, 15, 706);
+      add_location(p0, file, 25, 12, 703);
+      add_location(strong2, file, 27, 20, 773);
+      add_location(li0, file, 27, 16, 769);
+      add_location(strong3, file, 28, 20, 855);
+      add_location(li1, file, 28, 16, 851);
+      add_location(ul0, file, 26, 12, 747);
+      add_location(br2, file, 30, 12, 951);
+      add_location(strong4, file, 31, 15, 972);
+      add_location(p1, file, 31, 12, 969);
+      add_location(strong5, file, 33, 20, 1040);
+      add_location(li2, file, 33, 16, 1036);
+      add_location(ul1, file, 32, 12, 1014);
+      add_location(br3, file, 39, 12, 1282);
+      add_location(strong6, file, 40, 15, 1303);
+      add_location(p2, file, 40, 12, 1300);
+      add_location(strong7, file, 43, 20, 1396);
+      add_location(li3, file, 42, 16, 1370);
+      add_location(strong8, file, 46, 20, 1516);
+      add_location(li4, file, 45, 16, 1490);
+      add_location(strong9, file, 49, 20, 1682);
+      add_location(i, file, 51, 20, 1841);
+      add_location(li5, file, 48, 16, 1656);
+      add_location(ul2, file, 41, 12, 1348);
+      set_style(div0, "color", "rgb(244, 244, 244)");
+      add_location(div0, file, 21, 8, 553);
+      set_style(div1, "background", "#333");
+      set_style(div1, "padding", "25px");
+      add_location(div1, file, 11, 4, 244);
     },
     m: function mount(target, anchor) {
-      mount_component(scalebar, target, anchor);
-      insert_hydration_dev(target, t0, anchor);
-      insert_hydration_dev(target, div, anchor);
-      append_hydration_dev(div, br0);
-      append_hydration_dev(div, t1);
-      append_hydration_dev(div, strong0);
-      append_hydration_dev(div, t3);
-      append_hydration_dev(div, br1);
-      append_hydration_dev(div, t4);
-      append_hydration_dev(div, p0);
+      insert_hydration_dev(target, div1, anchor);
+      mount_component(scalebar, div1, null);
+      append_hydration_dev(div1, t0);
+      append_hydration_dev(div1, div0);
+      append_hydration_dev(div0, br0);
+      append_hydration_dev(div0, t1);
+      append_hydration_dev(div0, strong0);
+      append_hydration_dev(div0, t3);
+      append_hydration_dev(div0, br1);
+      append_hydration_dev(div0, t4);
+      append_hydration_dev(div0, p0);
       append_hydration_dev(p0, strong1);
-      append_hydration_dev(div, t6);
-      append_hydration_dev(div, ul0);
+      append_hydration_dev(div0, t6);
+      append_hydration_dev(div0, ul0);
       append_hydration_dev(ul0, li0);
       append_hydration_dev(li0, strong2);
       append_hydration_dev(li0, t8);
@@ -2648,23 +2673,23 @@ function create_default_slot(ctx) {
       append_hydration_dev(ul0, li1);
       append_hydration_dev(li1, strong3);
       append_hydration_dev(li1, t11);
-      append_hydration_dev(div, t12);
-      append_hydration_dev(div, br2);
-      append_hydration_dev(div, t13);
-      append_hydration_dev(div, p1);
+      append_hydration_dev(div0, t12);
+      append_hydration_dev(div0, br2);
+      append_hydration_dev(div0, t13);
+      append_hydration_dev(div0, p1);
       append_hydration_dev(p1, strong4);
-      append_hydration_dev(div, t15);
-      append_hydration_dev(div, ul1);
+      append_hydration_dev(div0, t15);
+      append_hydration_dev(div0, ul1);
       append_hydration_dev(ul1, li2);
       append_hydration_dev(li2, strong5);
       append_hydration_dev(li2, t17);
-      append_hydration_dev(div, t18);
-      append_hydration_dev(div, br3);
-      append_hydration_dev(div, t19);
-      append_hydration_dev(div, p2);
+      append_hydration_dev(div0, t18);
+      append_hydration_dev(div0, br3);
+      append_hydration_dev(div0, t19);
+      append_hydration_dev(div0, p2);
       append_hydration_dev(p2, strong6);
-      append_hydration_dev(div, t21);
-      append_hydration_dev(div, ul2);
+      append_hydration_dev(div0, t21);
+      append_hydration_dev(div0, ul2);
       append_hydration_dev(ul2, li3);
       append_hydration_dev(li3, strong7);
       append_hydration_dev(li3, t23);
@@ -2703,10 +2728,9 @@ function create_default_slot(ctx) {
     },
     d: function destroy(detaching) {
       if (detaching) {
-        detach_dev(t0);
-        detach_dev(div);
+        detach_dev(div1);
       }
-      destroy_component(scalebar, detaching);
+      destroy_component(scalebar);
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
@@ -2814,7 +2838,7 @@ function create_controls_slot(ctx) {
     block,
     id: create_controls_slot.name,
     type: "slot",
-    source: '(55:4) <svelte:fragment slot=\\"controls\\">',
+    source: '(59:4) <svelte:fragment slot=\\"controls\\">',
     ctx
   });
   return block;
@@ -2955,9 +2979,9 @@ class ScaleBar_story extends SvelteComponentDev {
   }
 }
 let files = [
-  { "id": "src-lib-brightnessmeter-brightnessmeter-story-svelte", "path": ["BrightnessMeter"], "filePath": "src/lib/BrightnessMeter/BrightnessMeter.story.svelte", "story": { "id": "src-lib-brightnessmeter-brightnessmeter-story-svelte", "title": "BrightnessMeter", "group": null, "layout": { "type": "single", "iframe": true }, "icon": null, "iconColor": null, "docsOnly": false, "variants": [{ "id": "_default", "title": "default" }] }, "supportPluginId": "svelte4", "docsFilePath": "src\\lib\\BrightnessMeter\\BrightnessMeter.story.md", "index": 0, component: BrightnessMeter_story, source: () => __vitePreload(() => import("./__resolved__virtual_story-source_src-lib-brightnessmeter-brightnessmeter-story-svelte-c52bcdf5.js"), true ? [] : void 0) },
-  { "id": "src-lib-icon-icon-story-svelte", "path": ["Icon"], "filePath": "src/lib/Icon/Icon.story.svelte", "story": { "id": "src-lib-icon-icon-story-svelte", "title": "Icon", "group": null, "layout": { "type": "single", "iframe": true }, "icon": null, "iconColor": null, "docsOnly": false, "variants": [{ "id": "_default", "title": "default" }] }, "supportPluginId": "svelte4", "index": 1, component: Icon_story, source: () => __vitePreload(() => import("./__resolved__virtual_story-source_src-lib-icon-icon-story-svelte-389225fc.js"), true ? [] : void 0) },
-  { "id": "src-lib-scalebar-scalebar-story-svelte", "path": ["ScaleBar"], "filePath": "src/lib/ScaleBar/ScaleBar.story.svelte", "story": { "id": "src-lib-scalebar-scalebar-story-svelte", "title": "ScaleBar", "group": null, "layout": { "type": "single", "iframe": true }, "icon": null, "iconColor": null, "docsOnly": false, "variants": [{ "id": "_default", "title": "default" }] }, "supportPluginId": "svelte4", "docsFilePath": "src\\lib\\ScaleBar\\ScaleBar.story.md", "index": 2, component: ScaleBar_story, source: () => __vitePreload(() => import("./__resolved__virtual_story-source_src-lib-scalebar-scalebar-story-svelte-6e063fe2.js"), true ? [] : void 0) }
+  { "id": "src-lib-brightnessmeter-brightnessmeter-story-svelte", "path": ["BrightnessMeter"], "filePath": "src/lib/BrightnessMeter/BrightnessMeter.story.svelte", "story": { "id": "src-lib-brightnessmeter-brightnessmeter-story-svelte", "title": "BrightnessMeter", "group": null, "layout": { "type": "single", "iframe": true }, "icon": null, "iconColor": null, "docsOnly": false, "variants": [{ "id": "_default", "title": "default" }] }, "supportPluginId": "svelte4", "docsFilePath": "src\\lib\\BrightnessMeter\\BrightnessMeter.story.md", "index": 0, component: BrightnessMeter_story, source: () => __vitePreload(() => import("./__resolved__virtual_story-source_src-lib-brightnessmeter-brightnessmeter-story-svelte-61bdaec0.js"), true ? [] : void 0) },
+  { "id": "src-lib-icon-icon-story-svelte", "path": ["Icon"], "filePath": "src/lib/Icon/Icon.story.svelte", "story": { "id": "src-lib-icon-icon-story-svelte", "title": "Icon", "group": null, "layout": { "type": "single", "iframe": true }, "icon": null, "iconColor": null, "docsOnly": false, "variants": [{ "id": "_default", "title": "default" }] }, "supportPluginId": "svelte4", "index": 1, component: Icon_story, source: () => __vitePreload(() => import("./__resolved__virtual_story-source_src-lib-icon-icon-story-svelte-209d0e12.js"), true ? [] : void 0) },
+  { "id": "src-lib-scalebar-scalebar-story-svelte", "path": ["ScaleBar"], "filePath": "src/lib/ScaleBar/ScaleBar.story.svelte", "story": { "id": "src-lib-scalebar-scalebar-story-svelte", "title": "ScaleBar", "group": null, "layout": { "type": "single", "iframe": true }, "icon": null, "iconColor": null, "docsOnly": false, "variants": [{ "id": "_default", "title": "default" }] }, "supportPluginId": "svelte4", "docsFilePath": "src\\lib\\ScaleBar\\ScaleBar.story.md", "index": 2, component: ScaleBar_story, source: () => __vitePreload(() => import("./__resolved__virtual_story-source_src-lib-scalebar-scalebar-story-svelte-c54c2550.js"), true ? [] : void 0) }
 ];
 let tree = [{ "group": true, "id": "top", "title": "", "children": [] }, { "title": "BrightnessMeter", "index": 0 }, { "title": "Icon", "index": 1 }, { "title": "ScaleBar", "index": 2 }];
 const base = "/huatai-test/";
@@ -2976,12 +3000,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: () => __vitePreload(() => import("./HomeView.vue-1fc47f73.js"), true ? ["assets/HomeView.vue-1fc47f73.js","assets/vendor-d0ae1662.js","assets/story-8c2a6e85.js"] : void 0)
+      component: () => __vitePreload(() => import("./HomeView.vue-994f2f7a.js"), true ? ["assets/HomeView.vue-994f2f7a.js","assets/vendor-95ffaa79.js","assets/story-3cc85c7d.js"] : void 0)
     },
     {
       path: "/story/:storyId",
       name: "story",
-      component: () => __vitePreload(() => import("./StoryView.vue-6bc8f98d.js"), true ? ["assets/StoryView.vue-6bc8f98d.js","assets/vendor-d0ae1662.js","assets/story-8c2a6e85.js","assets/MobileOverlay.vue2-b212d6d8.js","assets/BaseEmpty.vue-1d6f30df.js","assets/state-ac083f7e.js","assets/events-47e5ee3e.js"] : void 0)
+      component: () => __vitePreload(() => import("./StoryView.vue-029e4e84.js"), true ? ["assets/StoryView.vue-029e4e84.js","assets/vendor-95ffaa79.js","assets/story-3cc85c7d.js","assets/MobileOverlay.vue2-0001c0f2.js","assets/BaseEmpty.vue-7085d90e.js","assets/state-8585b124.js","assets/events-6625a05a.js"] : void 0)
     }
   ]
 });
@@ -3050,8 +3074,8 @@ function mapVariant(variant, existingVariant) {
   return result;
 }
 const clientSupportPlugins = {
-  "vanilla": () => __vitePreload(() => import("./vendor-d0ae1662.js").then((n) => n.bn), true ? [] : void 0),
-  "svelte4": () => __vitePreload(() => import("./vendor-d0ae1662.js").then((n) => n.bo), true ? [] : void 0)
+  "vanilla": () => __vitePreload(() => import("./vendor-95ffaa79.js").then((n) => n.bn), true ? [] : void 0),
+  "svelte4": () => __vitePreload(() => import("./vendor-95ffaa79.js").then((n) => n.bo), true ? [] : void 0)
 };
 const __default__ = {
   inheritAttrs: false

@@ -12,17 +12,18 @@ const __resolved__virtual_storySource_srcLibIconIconStorySvelte = `<script lang=
 <\/script>\r
 \r
 <Hst.Story title="Icon" responsiveDisabled>\r
-\r
+    <div style="background: #333; padding: 25px">\r
         <Icon {icon}/>\r
-    <div style="color: rgb(244, 244, 244)">\r
-    <br>\r
-    <strong>Icon</strong> - компонент для отображения доступных иконок.\r
+        <div style="color: rgb(244, 244, 244)">\r
+            <br>\r
+            <strong>Icon</strong> - компонент для отображения доступных иконок.\r
 \r
-    <p><strong>Props:</strong></p>\r
-        <ul>\r
-            <li><strong>icon: IconType</strong> - Имя иконки из списка доступных иконок IconType</li>\r
-        </ul>\r
+            <p><strong>Props:</strong></p>\r
+            <ul>\r
+                <li><strong>icon: IconType</strong> - Имя иконки из списка доступных иконок IconType</li>\r
+            </ul>\r
 \r
+        </div>\r
     </div>\r
     <svelte:fragment slot="controls">\r
         <Hst.Select\r

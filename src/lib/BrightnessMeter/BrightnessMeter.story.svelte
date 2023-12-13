@@ -12,6 +12,7 @@
 
 <Hst.Story title="BrightnessMeter" responsiveDisabled>
 
+    <div style="background: #333; padding: 25px">
     <BrightnessMeter
             {min}
             {max}
@@ -56,7 +57,7 @@
             </li>
         </ul>
     </div>
-
+    </div>
 
     <svelte:fragment slot="controls">
         <Hst.Number

@@ -1,14 +1,18 @@
-import { defineConfig } from 'histoire'
 import { HstSvelte } from '@histoire/plugin-svelte'
+import { defaultColors, defineConfig } from 'histoire'
 
 export default defineConfig({
     plugins: [HstSvelte()],
     outDir: 'docs',
     routerMode: 'hash',
     theme: {
-        storeColorScheme: false,
+        storeColorScheme: true,
         defaultColorScheme: 'dark',
-        hideColorSchemeSwitch: true,
+        hideColorSchemeSwitch: false,
+        colors: {
+            gray: defaultColors.gray,
+            primary: defaultColors.gray,
+        }
     },
     tree: {
         groups: [

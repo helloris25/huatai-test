@@ -12,17 +12,18 @@
 </script>
 
 <Hst.Story title="Icon" responsiveDisabled>
-
+    <div style="background: #333; padding: 25px">
         <Icon {icon}/>
-    <div style="color: rgb(244, 244, 244)">
-    <br>
-    <strong>Icon</strong> - компонент для отображения доступных иконок.
+        <div style="color: rgb(244, 244, 244)">
+            <br>
+            <strong>Icon</strong> - компонент для отображения доступных иконок.
 
-    <p><strong>Props:</strong></p>
-        <ul>
-            <li><strong>icon: IconType</strong> - Имя иконки из списка доступных иконок IconType</li>
-        </ul>
+            <p><strong>Props:</strong></p>
+            <ul>
+                <li><strong>icon: IconType</strong> - Имя иконки из списка доступных иконок IconType</li>
+            </ul>
 
+        </div>
     </div>
     <svelte:fragment slot="controls">
         <Hst.Select
