@@ -13546,6 +13546,23 @@ function validate_slots(name, slot, keys) {
     }
   }
 }
+function construct_svelte_component_dev(component, props) {
+  const error_message = "this={...} of <svelte:component> should specify a Svelte component.";
+  try {
+    const instance = new component(props);
+    if (!instance.$$ || !instance.$set || !instance.$on || !instance.$destroy) {
+      throw new Error(error_message);
+    }
+    return instance;
+  } catch (err) {
+    const { message } = err;
+    if (typeof message === "string" && message.indexOf("is not a constructor") !== -1) {
+      throw new Error(error_message);
+    } else {
+      throw err;
+    }
+  }
+}
 class SvelteComponentDev extends SvelteComponent {
   /** @param {import('./public.js').ComponentConstructorOptions<Props>} options */
   constructor(options) {
@@ -14642,7 +14659,7 @@ function useTransition(source, options = {}) {
 }
 const Logo_square = "/huatai-test/assets/histoire-svelte-e093dabf.svg";
 const Logo_dark = "/huatai-test/assets/histoire-svelte-text-008b417c.svg";
-const config$1 = { "plugins": [{ "name": "builtin:tailwind-tokens" }, { "name": "builtin:vanilla-support", "supportPlugin": { "id": "vanilla", "moduleName": "E:/projects/test-huatai/node_modules/histoire/dist/node/builtin-plugins/vanilla-support", "setupFn": "setupVanilla" } }, { "name": "@histoire/plugin-svelte", "supportPlugin": { "id": "svelte4", "moduleName": "@histoire/plugin-svelte", "setupFn": ["setupSvelte3", "setupSvelte4"] }, "commands": [{ "id": "histoire:plugin-svelte:generate-story", "label": "Generate Svelte 3 story from component", "icon": "https://svelte.dev/favicon.png", "searchText": "generate create", "clientSetupFile": "@histoire/plugin-svelte/dist/commands/generate-story.client.js" }] }], "outDir": "E:/projects/test-huatai/docs", "storyMatch": ["**/*.story.vue", "**/*.story.svelte"], "storyIgnored": ["**/node_modules/**", "**/dist/**"], "supportMatch": [{ "id": "vanilla", "patterns": ["**/*.js"], "pluginIds": ["vanilla"] }, { "id": "svelte", "patterns": ["**/*.svelte"], "pluginIds": ["svelte4"] }], "tree": { "file": "title", "order": "asc", "groups": [{ "id": "top", "title": "" }] }, "theme": { "title": "Histoire", "colors": { "primary": { "50": "#fff7ed", "100": "#ffedd5", "200": "#fed7aa", "300": "#fdba74", "400": "#fb923c", "500": "#f97316", "600": "#ea580c", "700": "#c2410c", "800": "#9a3412", "900": "#7c2d12" }, "gray": { "50": "#fafafa", "100": "#f4f4f5", "200": "#e4e4e7", "300": "#d4d4d8", "400": "#a1a1aa", "500": "#71717a", "600": "#52525b", "700": "#3f3f46", "750": "#323238", "800": "#27272a", "850": "#1f1f21", "900": "#18181b", "950": "#101012" } }, "defaultColorScheme": "auto", "storeColorScheme": true, "darkClass": "dark", "logo": { "square": "@histoire/plugin-svelte/assets/histoire-svelte.svg", "light": "@histoire/plugin-svelte/assets/histoire-svelte-text.svg", "dark": "@histoire/plugin-svelte/assets/histoire-svelte-text.svg" } }, "responsivePresets": [{ "label": "Mobile (Small)", "width": 320, "height": 560 }, { "label": "Mobile (Medium)", "width": 360, "height": 640 }, { "label": "Mobile (Large)", "width": 414, "height": 896 }, { "label": "Tablet", "width": 768, "height": 1024 }, { "label": "Laptop (Small)", "width": 1024, "height": null }, { "label": "Laptop (Large)", "width": 1366, "height": null }, { "label": "Desktop", "width": 1920, "height": null }, { "label": "4K", "width": 3840, "height": null }], "backgroundPresets": [{ "label": "Transparent", "color": "transparent", "contrastColor": "#333" }, { "label": "White", "color": "#fff", "contrastColor": "#333" }, { "label": "Light gray", "color": "#aaa", "contrastColor": "#000" }, { "label": "Dark gray", "color": "#333", "contrastColor": "#fff" }, { "label": "Black", "color": "#000", "contrastColor": "#eee" }], "sandboxDarkClass": "dark", "routerMode": "hash", "build": { "excludeFromVendorsChunk": [] }, "viteIgnorePlugins": ["vite-plugin-sveltekit-compile"] };
+const config$1 = { "plugins": [{ "name": "builtin:tailwind-tokens" }, { "name": "builtin:vanilla-support", "supportPlugin": { "id": "vanilla", "moduleName": "E:/projects/test-huatai/node_modules/histoire/dist/node/builtin-plugins/vanilla-support", "setupFn": "setupVanilla" } }, { "name": "@histoire/plugin-svelte", "supportPlugin": { "id": "svelte4", "moduleName": "@histoire/plugin-svelte", "setupFn": ["setupSvelte3", "setupSvelte4"] }, "commands": [{ "id": "histoire:plugin-svelte:generate-story", "label": "Generate Svelte 3 story from component", "icon": "https://svelte.dev/favicon.png", "searchText": "generate create", "clientSetupFile": "@histoire/plugin-svelte/dist/commands/generate-story.client.js" }] }], "outDir": "E:/projects/test-huatai/docs", "storyMatch": ["**/*.story.vue", "**/*.story.svelte"], "storyIgnored": ["**/node_modules/**", "**/dist/**"], "supportMatch": [{ "id": "vanilla", "patterns": ["**/*.js"], "pluginIds": ["vanilla"] }, { "id": "svelte", "patterns": ["**/*.svelte"], "pluginIds": ["svelte4"] }], "tree": { "file": "title", "order": "asc", "groups": [{ "id": "top", "title": "" }] }, "theme": { "title": "Histoire", "colors": { "primary": { "50": "#fff7ed", "100": "#ffedd5", "200": "#fed7aa", "300": "#fdba74", "400": "#fb923c", "500": "#f97316", "600": "#ea580c", "700": "#c2410c", "800": "#9a3412", "900": "#7c2d12" }, "gray": { "50": "#fafafa", "100": "#f4f4f5", "200": "#e4e4e7", "300": "#d4d4d8", "400": "#a1a1aa", "500": "#71717a", "600": "#52525b", "700": "#3f3f46", "750": "#323238", "800": "#27272a", "850": "#1f1f21", "900": "#18181b", "950": "#101012" } }, "defaultColorScheme": "dark", "storeColorScheme": false, "darkClass": "dark", "logo": { "square": "@histoire/plugin-svelte/assets/histoire-svelte.svg", "light": "@histoire/plugin-svelte/assets/histoire-svelte-text.svg", "dark": "@histoire/plugin-svelte/assets/histoire-svelte-text.svg" }, "hideColorSchemeSwitch": true }, "responsivePresets": [{ "label": "Mobile (Small)", "width": 320, "height": 560 }, { "label": "Mobile (Medium)", "width": 360, "height": 640 }, { "label": "Mobile (Large)", "width": 414, "height": 896 }, { "label": "Tablet", "width": 768, "height": 1024 }, { "label": "Laptop (Small)", "width": 1024, "height": null }, { "label": "Laptop (Large)", "width": 1366, "height": null }, { "label": "Desktop", "width": 1920, "height": null }, { "label": "4K", "width": 3840, "height": null }], "backgroundPresets": [{ "label": "Transparent", "color": "transparent", "contrastColor": "#333" }, { "label": "White", "color": "#fff", "contrastColor": "#333" }, { "label": "Light gray", "color": "#aaa", "contrastColor": "#000" }, { "label": "Dark gray", "color": "#333", "contrastColor": "#fff" }, { "label": "Black", "color": "#000", "contrastColor": "#eee" }], "sandboxDarkClass": "dark", "routerMode": "hash", "build": { "excludeFromVendorsChunk": [] }, "viteIgnorePlugins": ["vite-plugin-sveltekit-compile"] };
 const logos = { square: Logo_square, light: Logo_dark, dark: Logo_dark };
 const histoireConfig = config$1;
 const customLogos = logos;
@@ -14685,7 +14702,7 @@ async function logEvent(name, argument) {
       event
     });
   } else {
-    const { useEventsStore } = await __vitePreload(() => import("./events-2e39b081.js"), true ? ["assets/events-2e39b081.js","assets/story-ee126bea.js","assets/GenericMountStory.vue2-00342367.js"] : void 0);
+    const { useEventsStore } = await __vitePreload(() => import("./events-47e5ee3e.js"), true ? ["assets/events-47e5ee3e.js","assets/story-8c2a6e85.js","assets/GenericMountStory.vue2-39e29f54.js"] : void 0);
     useEventsStore().addEvent(event);
   }
 }
@@ -41194,7 +41211,7 @@ export {
   init as Z,
   __vitePreload as _,
   useRoute as a,
-  EVENT_SEND as a$,
+  vModelText as a$,
   dispatch_dev as a0,
   assign$1 as a1,
   compute_rest_props as a2,
@@ -41205,33 +41222,33 @@ export {
   children as a7,
   detach_dev as a8,
   set_svg_attributes as a9,
-  binding_callbacks as aA,
-  bind as aB,
-  text as aC,
-  get_svelte_dataset as aD,
-  claim_text as aE,
-  set_style as aF,
-  add_flush_callback as aG,
-  createRouter as aH,
-  createWebHistory as aI,
-  createWebHashHistory as aJ,
-  markRaw as aK,
-  watchEffect as aL,
-  mergeProps as aM,
-  resolveDynamicComponent as aN,
-  toRefs as aO,
-  useTransition as aP,
-  syncRefs as aQ,
-  unindent as aR,
-  useRouter as aS,
-  useResizeObserver as aT,
-  Am as aU,
-  withModifiers as aV,
-  renderSlot as aW,
-  vModelText as aX,
-  onUnmounted as aY,
-  VTooltip as aZ,
-  createStaticVNode as a_,
+  destroy_block as aA,
+  space as aB,
+  claim_space as aC,
+  logEvent as aD,
+  binding_callbacks as aE,
+  bind as aF,
+  text as aG,
+  get_svelte_dataset as aH,
+  claim_text as aI,
+  set_style as aJ,
+  add_flush_callback as aK,
+  createRouter as aL,
+  createWebHistory as aM,
+  createWebHashHistory as aN,
+  markRaw as aO,
+  watchEffect as aP,
+  mergeProps as aQ,
+  resolveDynamicComponent as aR,
+  toRefs as aS,
+  useTransition as aT,
+  syncRefs as aU,
+  unindent as aV,
+  useRouter as aW,
+  useResizeObserver as aX,
+  Am as aY,
+  withModifiers as aZ,
+  renderSlot as a_,
   toggle_class as aa,
   add_location as ab,
   attr_dev as ac,
@@ -41239,47 +41256,51 @@ export {
   append_hydration_dev as ae,
   get_spread_update as af,
   noop$2 as ag,
-  ensure_array_like_dev as ah,
-  validate_each_keys as ai,
-  createEventDispatcher as aj,
-  element as ak,
-  create_component as al,
-  space as am,
-  claim_element as an,
-  claim_component as ao,
-  claim_space as ap,
-  mount_component as aq,
-  listen_dev as ar,
-  get_spread_object as as,
-  update_keyed_each as at,
-  transition_in as au,
-  transition_out as av,
-  destroy_component as aw,
-  run_all as ax,
-  destroy_block as ay,
-  logEvent as az,
+  construct_svelte_component_dev as ah,
+  get_spread_object as ai,
+  create_component as aj,
+  empty as ak,
+  claim_component as al,
+  mount_component as am,
+  group_outros as an,
+  transition_out as ao,
+  destroy_component as ap,
+  check_outros as aq,
+  transition_in as ar,
+  ensure_array_like_dev as as,
+  validate_each_keys as at,
+  createEventDispatcher as au,
+  element as av,
+  claim_element as aw,
+  listen_dev as ax,
+  update_keyed_each as ay,
+  run_all as az,
   createElementBlock as b,
-  toRaw as b0,
-  Dropdown as b1,
-  clone as b2,
-  omit as b3,
-  useTimeoutFn as b4,
-  onClickOutside as b5,
-  nextTick as b6,
-  Mm as b7,
-  gm as b8,
-  ym as b9,
-  wm as ba,
-  shallowRef as bb,
-  getHighlighter as bc,
-  onBeforeUnmount as bd,
-  scrollIntoView as be,
-  useMediaQuery as bf,
-  useFocus as bg,
-  refDebounced as bh,
-  flexsearch_bundleExports as bi,
-  client as bj,
-  index as bk,
+  onUnmounted as b0,
+  VTooltip as b1,
+  createStaticVNode as b2,
+  EVENT_SEND as b3,
+  toRaw as b4,
+  Dropdown as b5,
+  clone as b6,
+  omit as b7,
+  useTimeoutFn as b8,
+  onClickOutside as b9,
+  nextTick as ba,
+  Mm as bb,
+  gm as bc,
+  ym as bd,
+  wm as be,
+  shallowRef as bf,
+  getHighlighter as bg,
+  onBeforeUnmount as bh,
+  scrollIntoView as bi,
+  useMediaQuery as bj,
+  useFocus as bk,
+  refDebounced as bl,
+  flexsearch_bundleExports as bm,
+  client as bn,
+  index as bo,
   computed as c,
   defineComponent as d,
   createVNode as e,

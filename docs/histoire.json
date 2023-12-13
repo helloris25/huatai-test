@@ -29,9 +29,70 @@
         "isRelatedToStory": true,
         "frontmatter": {}
       }
+    },
+    {
+      "id": "src-lib-icon-icon-story-svelte",
+      "title": "Icon",
+      "group": null,
+      "layout": {
+        "type": "single",
+        "iframe": true
+      },
+      "icon": null,
+      "iconColor": null,
+      "docsOnly": false,
+      "variants": [
+        {
+          "id": "_default",
+          "title": "default"
+        }
+      ],
+      "relativePath": "src/lib/Icon/Icon.story.svelte",
+      "supportPluginId": "svelte4",
+      "treePath": [
+        "Icon"
+      ],
+      "virtual": false,
+      "markdownFile": null
+    },
+    {
+      "id": "src-lib-scalebar-scalebar-story-svelte",
+      "title": "ScaleBar",
+      "group": null,
+      "layout": {
+        "type": "single",
+        "iframe": true
+      },
+      "icon": null,
+      "iconColor": null,
+      "docsOnly": false,
+      "variants": [
+        {
+          "id": "_default",
+          "title": "default"
+        }
+      ],
+      "relativePath": "src/lib/ScaleBar/ScaleBar.story.svelte",
+      "supportPluginId": "svelte4",
+      "treePath": [
+        "ScaleBar"
+      ],
+      "virtual": false,
+      "markdownFile": {
+        "id": "src-lib-scalebar-scalebar-story-md",
+        "relativePath": "src\\lib\\ScaleBar\\ScaleBar.story.md",
+        "isRelatedToStory": true,
+        "frontmatter": {}
+      }
     }
   ],
   "markdownFiles": [
+    {
+      "id": "svelte-kit-package-brightnessmeter-brightnessmeter-story-md",
+      "relativePath": ".svelte-kit\\__package__\\BrightnessMeter\\BrightnessMeter.story.md",
+      "isRelatedToStory": true,
+      "frontmatter": {}
+    },
     {
       "id": "src-lib-brightnessmeter-brightnessmeter-story-md",
       "relativePath": "src\\lib\\BrightnessMeter\\BrightnessMeter.story.md",
@@ -39,8 +100,14 @@
       "frontmatter": {}
     },
     {
-      "id": "svelte-kit-package-brightnessmeter-brightnessmeter-story-md",
-      "relativePath": ".svelte-kit\\__package__\\BrightnessMeter\\BrightnessMeter.story.md",
+      "id": "svelte-kit-package-scalebar-scalebar-story-md",
+      "relativePath": ".svelte-kit\\__package__\\ScaleBar\\ScaleBar.story.md",
+      "isRelatedToStory": true,
+      "frontmatter": {}
+    },
+    {
+      "id": "src-lib-scalebar-scalebar-story-md",
+      "relativePath": "src\\lib\\ScaleBar\\ScaleBar.story.md",
       "isRelatedToStory": true,
       "frontmatter": {}
     }
