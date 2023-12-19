@@ -1,80 +1,53 @@
 <script lang="ts" context="module">
-    import {createEventDispatcher} from 'svelte';
-    import ScaleBar from '$lib/ScaleBar/ScaleBar.svelte';
-    import Icon from '$lib/Icon/Icon.svelte';
-    import {MeterCalculator} from './MeterCalculator';
+    import { convertValueToBars, maxLevel } from './convertValueToBars';
+    import Moon from './Moon.svelte';
+    import Sun from './Sun.svelte';
 
-    const countBars = 7;
+		const barsArray = Array.from({length: maxLevel}, (_, index) => index + 1);
 
-    const controlStyleVariant = {
-        active: '1',
-        passive: '0.4',
-    } as const;
-
-    function getStyleControlByActive(isActiveControl: boolean): Record<string, string> {
+    function getStyleIconByActive(isActiveIcon: boolean): Record<string, string> {
         return {
-            'fill-opacity': isActiveControl ? controlStyleVariant.active : controlStyleVariant.passive,
+            'fill-opacity': isActiveIcon ? '1' : '0.4',
         };
     }
 </script>
 
 <script lang="ts">
-    const dispatch = createEventDispatcher();
     export let value: number = 0;
     export let min: number = 0;
     export let max: number = 1;
     export let optimum: number = 0.65;
 
-    $: meterCalculator = new MeterCalculator(min, max, countBars);
-    $: ininLevel = meterCalculator.toLevelFromMinMax(value);
-    $: optimumLevel = meterCalculator.toLevelFromMinMax(optimum);
-    $: currentLevel = ininLevel;
-    $: isReachedOptimum = currentLevel > optimumLevel;
-
-    function changeLevel(newLevel: number): void {
-        if (newLevel >= 1 && newLevel <= countBars && newLevel !== currentLevel) {
-            emitChangeLevel(newLevel);
-        }
-    }
-
-    function emitChangeLevel(level: number): void {
-        dispatch('changeValue', meterCalculator.toMinMaxFromLevel(level));
-    }
+    $: level = convertValueToBars(value, min, max);
 </script>
 
-<div
-        class="brightnessMeter"
-        role="slider"
-        aria-label="Регулятор яркости"
-        aria-valuemin={0}
-        aria-valuemax={countBars}
-        aria-valuenow={currentLevel}
-        aria-valuetext="Уровень яркости {currentLevel}"
->
-    <button
-            class="resetButtonStyle"
-            on:click={() => changeLevel(currentLevel - 1)}
-            aria-label="сделать темнее">
-        <Icon icon={'Moon'} {...getStyleControlByActive(!isReachedOptimum)} />
-    </button>
+<div class="brightnessMeter">
+    <Moon {...getStyleIconByActive(value < optimum)} />
 
-    <ScaleBar
-        {countBars}
-        selectedLevel={currentLevel}
-        on:changeValue={({detail}) => changeLevel(detail)}
-    />
+    <div class="bar">
+        {#each barsArray as levelNumber (levelNumber + 1)}
+            <div    class="line"
+                    class:fillLevel={level >= levelNumber}
+                    class:currentLevel={level === levelNumber}
+                    class:nearLevel={Math.abs(level - levelNumber) === 1}>
+            </div>
+        {/each}
+    </div>
 
-    <button
-            class="resetButtonStyle"
-            on:click={() => changeLevel(currentLevel + 1)}
-            aria-label="сделать ярче">
-        <Icon icon={'Sun'} {...getStyleControlByActive(isReachedOptimum)} />
-    </button>
+    <Sun {...getStyleIconByActive(value >= optimum)} />
 </div>
 
 <style>
-    @import '../common/vars.css';
-    @import '../common/styles.css';
+    :root {
+        --white-40: rgba(255, 255, 255, 0.4);
+        --white-60: rgba(255, 255, 255, 0.6);
+        --white-100: rgba(255, 255, 255, 1);
+        --transition-time: 0.3s;
+    }
+
+    .brightnessMeter > :global(path) {
+        transition: var(--transition-time);
+    }
 
     .brightnessMeter {
         display: inline-flex;
@@ -83,9 +56,47 @@
         gap: 17px;
     }
 
+    .bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .line {
+        width: 8px;
+        height: 24px;
+        border-radius: 3px;
+        background: var(--white-40);
+        transition: var(--transition-time);
+    }
+
+    .currentLevel {
+        transform: scaleY(1.5) scaleX(1.25);
+        box-shadow: 0 0 24px -2px var(--white-100),  0 0 6px -1px var(--white-100);
+    }
+
+    .fillLevel {
+        background: var(--white-100);
+    }
+
+    .nearLevel {
+        transform: scaleY(1.16);
+    }
+
+    .currentLevel + .nearLevel {
+        background: var(--white-60);
+    }
+
     @media (max-width: 320px) {
         .brightnessMeter {
             gap: 13px;
+        }
+
+        .line {
+            width: 6px;
+            height: 20px;
         }
     }
 </style>

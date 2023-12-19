@@ -12914,10 +12914,6 @@ function space() {
 function empty() {
   return text("");
 }
-function listen(node, event, handler, options) {
-  node.addEventListener(event, handler, options);
-  return () => node.removeEventListener(event, handler, options);
-}
 function attr(node, attribute, value) {
   if (value == null)
     node.removeAttribute(attribute);
@@ -13511,21 +13507,6 @@ function detach_dev(node) {
   dispatch_dev("SvelteDOMRemove", { node });
   detach(node);
 }
-function listen_dev(node, event, handler, options, has_prevent_default, has_stop_propagation, has_stop_immediate_propagation) {
-  const modifiers = options === true ? ["capture"] : options ? Array.from(Object.keys(options)) : [];
-  if (has_prevent_default)
-    modifiers.push("preventDefault");
-  if (has_stop_propagation)
-    modifiers.push("stopPropagation");
-  if (has_stop_immediate_propagation)
-    modifiers.push("stopImmediatePropagation");
-  dispatch_dev("SvelteDOMAddEventListener", { node, event, handler, modifiers });
-  const dispose = listen(node, event, handler, options);
-  return () => {
-    dispatch_dev("SvelteDOMRemoveEventListener", { node, event, handler, modifiers });
-    dispose();
-  };
-}
 function attr_dev(node, attribute, value) {
   attr(node, attribute, value);
   if (value == null)
@@ -13543,23 +13524,6 @@ function validate_slots(name, slot, keys) {
   for (const slot_key of Object.keys(slot)) {
     if (!~keys.indexOf(slot_key)) {
       console.warn(`<${name}> received an unexpected slot "${slot_key}".`);
-    }
-  }
-}
-function construct_svelte_component_dev(component, props) {
-  const error_message = "this={...} of <svelte:component> should specify a Svelte component.";
-  try {
-    const instance = new component(props);
-    if (!instance.$$ || !instance.$set || !instance.$on || !instance.$destroy) {
-      throw new Error(error_message);
-    }
-    return instance;
-  } catch (err) {
-    const { message } = err;
-    if (typeof message === "string" && message.indexOf("is not a constructor") !== -1) {
-      throw new Error(error_message);
-    } else {
-      throw err;
     }
   }
 }
@@ -14702,7 +14666,7 @@ async function logEvent(name, argument) {
       event
     });
   } else {
-    const { useEventsStore } = await __vitePreload(() => import("./events-6625a05a.js"), true ? ["assets/events-6625a05a.js","assets/story-3cc85c7d.js","assets/GenericMountStory.vue2-bd1c9fd7.js"] : void 0);
+    const { useEventsStore } = await __vitePreload(() => import("./events-d5d17681.js"), true ? ["assets/events-d5d17681.js","assets/story-3aeaf920.js","assets/GenericMountStory.vue2-78766e6a.js"] : void 0);
     useEventsStore().addEvent(event);
   }
 }
@@ -16796,7 +16760,7 @@ function useHistoryListeners(base, historyState, currentLocation, replace) {
   function pauseListeners() {
     pauseState = currentLocation.value;
   }
-  function listen2(callback) {
+  function listen(callback) {
     listeners.push(callback);
     const teardown = () => {
       const index2 = listeners.indexOf(callback);
@@ -16825,7 +16789,7 @@ function useHistoryListeners(base, historyState, currentLocation, replace) {
   });
   return {
     pauseListeners,
-    listen: listen2,
+    listen,
     destroy
   };
 }
@@ -41211,7 +41175,7 @@ export {
   init as Z,
   __vitePreload as _,
   useRoute as a,
-  vModelText as a$,
+  useTimeoutFn as a$,
   dispatch_dev as a0,
   assign$1 as a1,
   compute_rest_props as a2,
@@ -41222,85 +41186,76 @@ export {
   children as a7,
   detach_dev as a8,
   set_svg_attributes as a9,
-  destroy_block as aA,
-  space as aB,
-  claim_space as aC,
-  logEvent as aD,
-  binding_callbacks as aE,
-  bind as aF,
-  text as aG,
-  get_svelte_dataset as aH,
-  claim_text as aI,
-  set_style as aJ,
-  add_flush_callback as aK,
-  createRouter as aL,
-  createWebHistory as aM,
-  createWebHashHistory as aN,
-  markRaw as aO,
-  watchEffect as aP,
-  mergeProps as aQ,
-  resolveDynamicComponent as aR,
-  toRefs as aS,
-  useTransition as aT,
-  syncRefs as aU,
-  unindent as aV,
-  useRouter as aW,
-  useResizeObserver as aX,
-  Am as aY,
-  withModifiers as aZ,
-  renderSlot as a_,
-  toggle_class as aa,
-  add_location as ab,
-  attr_dev as ac,
-  insert_hydration_dev as ad,
-  append_hydration_dev as ae,
-  get_spread_update as af,
-  noop$2 as ag,
-  construct_svelte_component_dev as ah,
-  get_spread_object as ai,
+  set_style as aA,
+  add_flush_callback as aB,
+  createRouter as aC,
+  createWebHistory as aD,
+  createWebHashHistory as aE,
+  markRaw as aF,
+  watchEffect as aG,
+  mergeProps as aH,
+  resolveDynamicComponent as aI,
+  toRefs as aJ,
+  useTransition as aK,
+  syncRefs as aL,
+  unindent as aM,
+  useRouter as aN,
+  useResizeObserver as aO,
+  Am as aP,
+  withModifiers as aQ,
+  renderSlot as aR,
+  vModelText as aS,
+  onUnmounted as aT,
+  VTooltip as aU,
+  createStaticVNode as aV,
+  EVENT_SEND as aW,
+  toRaw as aX,
+  Dropdown as aY,
+  clone as aZ,
+  omit as a_,
+  add_location as aa,
+  attr_dev as ab,
+  insert_hydration_dev as ac,
+  append_hydration_dev as ad,
+  get_spread_update as ae,
+  noop$2 as af,
+  ensure_array_like_dev as ag,
+  validate_each_keys as ah,
+  element as ai,
   create_component as aj,
-  empty as ak,
-  claim_component as al,
-  mount_component as am,
-  group_outros as an,
-  transition_out as ao,
-  destroy_component as ap,
-  check_outros as aq,
+  space as ak,
+  claim_element as al,
+  claim_component as am,
+  claim_space as an,
+  mount_component as ao,
+  get_spread_object as ap,
+  update_keyed_each as aq,
   transition_in as ar,
-  ensure_array_like_dev as as,
-  validate_each_keys as at,
-  createEventDispatcher as au,
-  element as av,
-  claim_element as aw,
-  listen_dev as ax,
-  update_keyed_each as ay,
-  run_all as az,
+  transition_out as as,
+  destroy_component as at,
+  get_svelte_dataset as au,
+  toggle_class as av,
+  destroy_block as aw,
+  logEvent as ax,
+  binding_callbacks as ay,
+  bind as az,
   createElementBlock as b,
-  onUnmounted as b0,
-  VTooltip as b1,
-  createStaticVNode as b2,
-  EVENT_SEND as b3,
-  toRaw as b4,
-  Dropdown as b5,
-  clone as b6,
-  omit as b7,
-  useTimeoutFn as b8,
-  onClickOutside as b9,
-  nextTick as ba,
-  Mm as bb,
-  gm as bc,
-  ym as bd,
-  wm as be,
-  shallowRef as bf,
-  getHighlighter as bg,
-  onBeforeUnmount as bh,
-  scrollIntoView as bi,
-  useMediaQuery as bj,
-  useFocus as bk,
-  refDebounced as bl,
-  flexsearch_bundleExports as bm,
-  client as bn,
-  index as bo,
+  onClickOutside as b0,
+  nextTick as b1,
+  Mm as b2,
+  gm as b3,
+  ym as b4,
+  wm as b5,
+  shallowRef as b6,
+  getHighlighter as b7,
+  onBeforeUnmount as b8,
+  scrollIntoView as b9,
+  useMediaQuery as ba,
+  useFocus as bb,
+  refDebounced as bc,
+  flexsearch_bundleExports as bd,
+  client as be,
+  index as bf,
   computed as c,
   defineComponent as d,
   createVNode as e,

@@ -9,8 +9,5 @@ export default defineConfig({
 		include: ['src/**/*.{test,spec}.{js,ts}'],
         environment: "jsdom",
 	},
-    base: '/huatai-test/',
-    histoire: {
-        // Histoire config can also go here
-    },
+    base: '/huatai-test/'
 });
