@@ -1,11 +1,13 @@
-# Тестовое задание для Haut.Ai
+# Test task for Haut.Ai
 
-**Задание:**
-Сделать аналог компонента meter ориентированный для изменения яркости по заданному дизайну, с определённым поведением и адаптивом.
+**Task:**
+Make a component similar to HTMLMeterElement, based on a given design
 
-[Дизайн](https://www.figma.com/file/FP6pG93dpz9SCvCRzW4RP1/Test-Task---Ruchevsky-Ilya-%7C-Haut.ai?node-id=13%3A2&mode=dev)
+[Design](https://www.figma.com/file/FP6pG93dpz9SCvCRzW4RP1/Test-Task---Ruchevsky-Ilya-%7C-Haut.ai?node-id=13%3A2&mode=dev)
 
-**Доп. задания:**
- * Написать тесты ✅
- * Использовать Histoire, чтобы продемонстрировать результат. ✅
- * Выложить на статик сервер ✅
+**Additional tasks:**
+ * Utilize Histoire to demonstrate the result. ✅
+ * Cover the requirements above with unit tests. ✅
+ * Host the demo result on GitHub Pages, Netlify, or any other solution. ✅ - used Vercel
+
+[See the result](https://huatai-test.vercel.app/)
