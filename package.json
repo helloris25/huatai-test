@@ -14,7 +14,7 @@
     "format": "prettier --write .",
     "test:unit": "vitest",
     "story:dev": "histoire dev",
-    "story:build": "histoire build --base=/huatai-test/",
+    "story:build": "histoire build",
     "story:preview": "histoire preview"
   },
   "exports": {
