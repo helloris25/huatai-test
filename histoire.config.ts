@@ -3,7 +3,7 @@ import { defaultColors, defineConfig } from 'histoire'
 
 export default defineConfig({
     plugins: [HstSvelte()],
-    outDir: 'docs',
+    outDir: 'histoire-dist',
     routerMode: 'hash',
     theme: {
         storeColorScheme: true,
