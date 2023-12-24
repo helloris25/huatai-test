@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-    import { convertValueToBars, maxLevel } from './convertValueToBars';
+    import { convertValueToBars, maxLevel } from './convertValueToBars.js';
     import Moon from './Moon.svelte';
     import Sun from './Sun.svelte';
 
@@ -29,7 +29,7 @@
             <div    class="line"
                     class:fillLevel={level >= levelNumber}
                     class:currentLevel={level === levelNumber}
-                    class:nearLevel={Math.abs(level - levelNumber) === 1}>
+                    class:beforeCurrentLevel={levelNumber === level - 1}>
             </div>
         {/each}
     </div>
@@ -81,11 +81,12 @@
         background: var(--white-100);
     }
 
-    .nearLevel {
+    .beforeCurrentLevel,
+    .currentLevel + .line{
         transform: scaleY(1.16);
     }
 
-    .currentLevel + .nearLevel {
+    .currentLevel + .line {
         background: var(--white-60);
     }
 
