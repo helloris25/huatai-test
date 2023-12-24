@@ -5,6 +5,9 @@ export default defineConfig({
     plugins: [HstSvelte()],
     outDir: 'histoire-dist',
     routerMode: 'hash',
+		storyMatch: [
+			'src/**/*.story.svelte',
+		],
     theme: {
         storeColorScheme: true,
         defaultColorScheme: 'dark',
