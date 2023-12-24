@@ -1,5 +1,4 @@
 <script>
-	import { logEvent } from 'histoire/client';
 	import BrightnessMeter from './BrightnessMeter.svelte';
 
 	export let Hst;
@@ -16,11 +15,7 @@
 			{min}
 			{max}
 			{value}
-			{optimum}
-			on:changeValue={event => {
-                    value = event.detail;
-                    logEvent('changeValue', event);
-                }} />
+			{optimum}/>
 	</div>
 
 	<svelte:fragment slot="controls">
