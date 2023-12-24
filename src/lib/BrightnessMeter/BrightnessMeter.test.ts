@@ -27,7 +27,7 @@ describe('BrightnessMeter', () => {
 		expect(target.querySelectorAll('.line').length).equal(maxLevel);
 		expect(target.querySelectorAll('.currentLevel').length).toBeTruthy();
 		expect(target.querySelectorAll('.fillLevel').length).toBeTruthy();
-		expect(target.querySelectorAll('.nearLevel').length).toBeTruthy();
+		expect(target.querySelectorAll('.beforeCurrentLevel').length).toBeTruthy();
 		expect(target.querySelectorAll('svg').length).equal(2);
 	});
 
